@@ -10,24 +10,30 @@
 						  #===>	
 # 	A		B		C				# 	A		B		C
 
-small_disc =  1
+
+#intialize
+#play
+#render
+#won?
+#valid_move?
+#move(from, to)
+
+small_disc =  1 
 medium_disc = 2
 large_disc =  3
-
 towers = {
-	'a' => [large_disc, medium_disc, small_disc],
-	'b' => [],
-	'c' => []
+'a' => [large_disc, medium_disc, small_disc],
+'b' => [],
+'c' => []
 }
 
-map = 
 puts "welcome to Tower of Hanoi"
 puts "
-1                  
-2				  	
-3					
+1
+2
+3
 A		B		C"
-puts "migrate all discs from tower A to tower C"
+puts "Migrate all discs from tower A to tower C"
 puts "Play by selecting where to place your first disc from and to"
 
 while towers['c'].length < 3
@@ -37,11 +43,8 @@ while towers['c'].length < 3
 		towers[to] << towers[from].pop
 
 	#error message when a bigger disc is placed on top of a small disc
-	else #towers[from].last > towers[to].last
+	elsif
 		puts "hmm that's against the rule."
-
-	# elsif towers[from].empty? > towers[to].last
-	# 	puts "hmm that's against the rule."
 	end
 
 	p towers ['a']
@@ -49,5 +52,8 @@ while towers['c'].length < 3
 	p towers ['c']
 	puts "place your next move"
 end
+puts "congrats"
 
-puts 'congrats'
+
+
+
